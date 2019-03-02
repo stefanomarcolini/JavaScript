@@ -1,0 +1,11 @@
+/* Modules */
+
+.levelOne{
+    @include set-layer(0, 1%, relative, table, 100%, 100vh);
+    background-color: black;
+}
+
+.levelTwo{
+    @include set-layer(0, 0, relative, block, 100%, 97vh);
+    background-color: black;
+}

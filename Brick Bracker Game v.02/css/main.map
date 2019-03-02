@@ -1,0 +1,18 @@
+{
+	"version": 3,
+	"file": "../scss/main.css",
+	"sources": [
+		"../scss/main.scss",
+		"../scss/base/_base.scss",
+		"../scss/base/_mixins.scss",
+		"../scss/modules/_divs.scss"
+	],
+	"sourcesContent": [
+		"/*\n    Brick Bracker Game Sass Theme\n    Author: Stefano Marcolini\n    Version: 0.0.1\n\n    order of import may count\n*/\n\n\n\n/* BASE - Base styles, variables, mixins, etc... */\n\n@import 'base/_base.scss';\n// @import 'base/_variables.scss';\n@import 'base/_mixins.scss';\n// @import 'base/_normalize.scss';\n\n/* MODULES - Individual site components */\n\n// @import 'modules/_typography.scss';\n// @import 'modules/_sections.scss';\n@import 'modules/_divs.scss';\n\n\n/* LAYOUTS - Page layout styles */\n\n// @import 'layouts/_nav.scss';\n// @import 'layouts/_header.scss';\n// @import 'layouts/_footer.scss';",
+		"/* Base */\n\n* {\n    margin: 0;\n    padding: 0;\n}\n\ncanvas{\n    // margin: 0;\n    // padding: 0;\n    background-color: #123456;\n}",
+		"/* Mixins */\n\n@mixin set-layer($_margin, $_padding, $_position, $_dispaly, $_width, $_height){\n    margin-top: $_margin;\n    margin-bottom: $_margin;\n    margin-left: $_margin;\n    margin-right: $_margin;\n    padding-top: $_padding;\n    padding-bottom: $_padding;\n    padding-left: $_padding;\n    padding-right: $_padding;\n    position: $_position;\n    display: $_dispaly;\n    width: $_width;\n    height: $_height;\n}",
+		"/* Modules */\n\n.levelOne{\n    @include set-layer(0, 1%, relative, table, 100%, 100vh);\n    background-color: black;\n}\n\n.levelTwo{\n    @include set-layer(0, 0, relative, block, 100%, 97vh);\n    background-color: black;\n}"
+	],
+	"mappings": "AAAA;;;;;;EAME;AAIF,mDAAmD;ACVnD,UAAU;;AAEV,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAE;EACV,OAAO,EAAE,CAAE;CACd;;;AAED,AAAA,MAAM,CAAA;EAGF,gBAAgB,EAAE,OAAQ;CAC7B;;ACXD,YAAY;AFiBZ,0CAA0C;AGjB1C,aAAa;;AAEb,AAAA,SAAS,CAAA;EDCL,UAAU,ECAS,CAAC;EDCpB,aAAa,ECDM,CAAC;EDEpB,WAAW,ECFQ,CAAC;EDGpB,YAAY,ECHO,CAAC;EDIpB,WAAW,ECJW,EAAE;EDKxB,cAAc,ECLQ,EAAE;EDMxB,YAAY,ECNU,EAAE;EDOxB,aAAa,ECPS,EAAE;EDQxB,QAAQ,ECRkB,QAAQ;EDSlC,OAAO,ECT6B,KAAK;EDUzC,KAAK,ECVsC,IAAI;EDW/C,MAAM,ECX2C,KAAK;EACtD,gBAAgB,EAAE,KAAM;CAC3B;;;AAED,AAAA,SAAS,CAAA;EDJL,UAAU,ECKS,CAAC;EDJpB,aAAa,ECIM,CAAC;EDHpB,WAAW,ECGQ,CAAC;EDFpB,YAAY,ECEO,CAAC;EDDpB,WAAW,ECCW,CAAC;EDAvB,cAAc,ECAQ,CAAC;EDCvB,YAAY,ECDU,CAAC;EDEvB,aAAa,ECFS,CAAC;EDGvB,QAAQ,ECHiB,QAAQ;EDIjC,OAAO,ECJ4B,KAAK;EDKxC,KAAK,ECLqC,IAAI;EDM9C,MAAM,ECN0C,IAAI;EACpD,gBAAgB,EAAE,KAAM;CAC3B;;AHcD,kCAAkC",
+	"names": []
+}

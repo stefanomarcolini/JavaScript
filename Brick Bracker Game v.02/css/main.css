@@ -1,0 +1,60 @@
+/*
+    Brick Bracker Game Sass Theme
+    Author: Stefano Marcolini
+    Version: 0.0.1
+
+    order of import may count
+*/
+/* BASE - Base styles, variables, mixins, etc... */
+/* Base */
+/* line 3, /home/pixie/Dev/Projects/Brick Bracker Game v.02/scss/base/_base.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, /home/pixie/Dev/Projects/Brick Bracker Game v.02/scss/base/_base.scss */
+canvas {
+  background-color: #123456;
+}
+
+/* Mixins */
+/* MODULES - Individual site components */
+/* Modules */
+/* line 3, /home/pixie/Dev/Projects/Brick Bracker Game v.02/scss/modules/_divs.scss */
+.levelOne {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+/* line 8, /home/pixie/Dev/Projects/Brick Bracker Game v.02/scss/modules/_divs.scss */
+.levelTwo {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 97vh;
+  background-color: black;
+}
+
+/* LAYOUTS - Page layout styles */
+
+/*# sourceMappingURL=../css/main.map */

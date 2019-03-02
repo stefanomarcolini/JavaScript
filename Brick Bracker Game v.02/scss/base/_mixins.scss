@@ -1,0 +1,16 @@
+/* Mixins */
+
+@mixin set-layer($_margin, $_padding, $_position, $_dispaly, $_width, $_height){
+    margin-top: $_margin;
+    margin-bottom: $_margin;
+    margin-left: $_margin;
+    margin-right: $_margin;
+    padding-top: $_padding;
+    padding-bottom: $_padding;
+    padding-left: $_padding;
+    padding-right: $_padding;
+    position: $_position;
+    display: $_dispaly;
+    width: $_width;
+    height: $_height;
+}
