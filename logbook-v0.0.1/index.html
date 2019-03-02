@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>logbook-record | home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "***",
+                authDomain: "***",
+                databaseURL: "***",
+                projectId: "***",
+                storageBucket: "***",
+                messagingSenderId: "***"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="js/main.js"></script>
+    </head>
+
+    <body>
+
+        <hr>
+
+        <!-- CREATE -->
+        <h2>Create a new Record:</h2>
+        <form>
+            <input id="txt-marca" type="text" pattern="[A-Z]{1,3}-[A-Z]{4}" placeholder="marca" /><br/>
+            <input id="txt-inv" type="text" pattern="[A-Z]{1}[0-9]+" placeholder="invoice" required /><br/>
+            <input id="txt-date" type="text" pattern="(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])([0-9]{2})" placeholder="date (format: ddmmyy)" required /><br/>
+            <input id="txt-name" type="text" pattern="[A-Z][a-z]+" placeholder="name" /><br/>
+            <input id="txt-dep" type="text" pattern="[A-Z]{4}" placeholder="departure" />
+            <input id="txt-dep-h" type="text" pattern="(0[0-9]|1[0-9]|2[0-4]):([0-5][0-9])" placeholder="departure time" /><br/>
+            <input id="txt-arr" type="text" pattern="[A-Z]{4}" placeholder="arrival" />
+            <input id="txt-arr-h" type="text" pattern="(0[0-9]|1[0-9]|2[0-4]):([0-5][0-9])" placeholder="arrival time" /><br/>
+            <input id="txt-lnd" type="text" pattern="[1-9]+" placeholder="landings" /><br/>
+            <input id="txt-tot" type="text" pattern="(00|0[1-9]|[1-9][0-9]+):[0-5][0-9]" placeholder="total flight time" /><br/>
+            <input id="txt-custom" type="text" placeholder="comment" />
+            <br/><br/>
+            <button id="btn-save" type="button">Create</button>
+            <button type="reset">Reset</button>
+            <br/>
+            <p id="txt-response"></p>
+        </form>
+        <br/>
+        <hr>
+
+        <!-- READ -->
+        <h2>Read an existing Record:</h2>
+        <p id="txt-r-view"></p>
+        <form>
+            <input id="txt-r-id" type="text" pattern="[A-Za-z0-9]{20}" placeholder="record ID" required />
+            <!-- <input id="txt-r-inv" type="text" pattern="[A-Z]{1}[0-9]+" placeholder="invoice" /><br/>
+            <input id="txt-r-date" type="text" pattern="(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])([0-9]{2})" placeholder="date (format: ddmmyy)" /><br/> -->
+            <br/><br/>
+            <button id="btn-read" type="button">Read</button>
+            <button type="reset">Reset</button>
+            <br/>
+            <p id="txt-r-response"></p>
+        </form>
+        <br/>
+        <hr>
+        <!-- <p id="r-view"></p>
+        <br/>
+        <button id="btn-read" type="button">Read</button>
+        <br/><br/>
+        <hr/> -->
+
+        <!-- UPDATE -->
+        <h2>Update an existing Record:</h2>
+        <form>
+            <input id="txt-u-marca" type="text" pattern="[A-Z]{1,3}-[A-Z]{4}" placeholder="marca" /><br/>
+            <input id="txt-u-name" type="text" pattern="[A-Z][a-z]+" placeholder="name" /><br/>
+            <input id="txt-u-dep" type="text" pattern="[A-Z]{4}" placeholder="departure" />
+            <input id="txt-u-dep-h" type="text" pattern="(0[0-9]|1[0-9]|2[0-4]):([0-5][0-9])" placeholder="departure time" /><br/>
+            <input id="txt-u-arr" type="text" pattern="[A-Z]{4}" placeholder="arrival" />
+            <input id="txt-u-arr-h" type="text" pattern="(0[0-9]|1[0-9]|2[0-4]):([0-5][0-9])" placeholder="arrival time" /><br/>
+            <input id="txt-u-lnd" type="text" pattern="[1-9]+" placeholder="landings" /><br/>
+            <input id="txt-u-tot" type="text" pattern="(00|0[1-9]|[1-9][0-9]+):[0-5][0-9]" placeholder="total flight time" /><br/>
+            <input id="txt-u-custom" type="text" placeholder="comment" />
+            <br/><br/>
+            <input id="txt-u-id" type="text" pattern="[A-Za-z0-9]{20}" placeholder="record ID" required />
+            <!-- <input id="txt-u-inv" type="text" pattern="[A-Z]{1}[0-9]+" placeholder="invoice" /><br/>
+            <input id="txt-u-date" type="text" pattern="(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])([0-9]{2})" placeholder="date (format: ddmmyy)" /><br/> -->
+            <br/><br/>
+            <button id="btn-update" type="button">Update</button>
+            <button type="reset">Reset</button>
+            <br/>
+            <p id="txt-u-response"></p>
+        </form>
+        <br/>
+        <hr>
+
+        <!-- DELETE -->
+        <h2>Delete an existing Record:</h2>
+        <form>
+            <input id="txt-d-id" type="text" pattern="[A-Za-z0-9]{20}" placeholder="record ID" required />
+            <!-- <input id="txt-d-inv" type="text" pattern="[A-Z]{1}[0-9]+" placeholder="invoice" /><br/>
+            <input id="txt-d-date" type="text" pattern="(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])([0-9]{2})" placeholder="date (format: ddmmyy)" /><br/> -->
+            <br/><br/>
+            <button id="btn-delete" type="button">Delete</button>
+            <button type="reset">Reset</button>
+            <br/>
+            <p id="txt-d-response"></p>
+        </form>
+        <br/>
+        <hr>
+
+    </body>
+</html>
