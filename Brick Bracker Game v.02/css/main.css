@@ -7,13 +7,13 @@
 */
 /* BASE - Base styles, variables, mixins, etc... */
 /* Base */
-/* line 3, /home/pixie/Dev/Projects/Brick Bracker Game v.02/scss/base/_base.scss */
+/* line 3, /***/***/***/***/Brick Bracker Game v.02/scss/base/_base.scss */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* line 8, /home/pixie/Dev/Projects/Brick Bracker Game v.02/scss/base/_base.scss */
+/* line 8, /***/***/***/Projects/Brick Bracker Game v.02/scss/base/_base.scss */
 canvas {
   background-color: #123456;
 }
@@ -21,7 +21,7 @@ canvas {
 /* Mixins */
 /* MODULES - Individual site components */
 /* Modules */
-/* line 3, /home/pixie/Dev/Projects/Brick Bracker Game v.02/scss/modules/_divs.scss */
+/* line 3, /***/***/***/Projects/Brick Bracker Game v.02/scss/modules/_divs.scss */
 .levelOne {
   margin-top: 0;
   margin-bottom: 0;
@@ -38,7 +38,7 @@ canvas {
   background-color: black;
 }
 
-/* line 8, /home/pixie/Dev/Projects/Brick Bracker Game v.02/scss/modules/_divs.scss */
+/* line 8, /***/***/***/Projects/Brick Bracker Game v.02/scss/modules/_divs.scss */
 .levelTwo {
   margin-top: 0;
   margin-bottom: 0;
